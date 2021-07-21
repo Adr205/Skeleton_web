@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <!-- <h2>
+        <a href="https://nodejs.org">NodeJS</a>
+        <a href="https://ejs.co">EJS</a>
+    </h2> -->
+    
+    <h2>
+
+        <% for(var i = 0; i < items.length; i++){ %>
+            <a href="<%= items[i].url %>"><%= items[i].name %></a>
+        <%}%>
+
+    </h2>
+    <p>
+        <%if(isAdmin){ %>
+            <p>Bienvenido Admin</p>
+        <%} else{ %>
+        <p>Bienveido usuario</p>
+        <%} %>
+    </p>
+
+</body>
+</html>
